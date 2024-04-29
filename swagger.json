@@ -7,13 +7,16 @@
   },
   "servers": [
     {
-      "url": "https://api.example.com/v1"
+      "url": "https://unitsnet-openapi-spec-example.castnet.club"
     }
   ],
   "paths": {
     "/length": {
       "get": {
         "summary": "Get some length",
+        "description": "Click here to get 10 meters length, but represented by other randomly selected units. see [here](https://github.com/haimkastner/unitsnet-openapi-spec-example/blob/c98c129403a811854b1ed885850a0aeb08d9e5f8/index.js#L20C1-L32C4) the server code",
+        "parameters": [
+        ],
         "responses": {
           "200": {
             "description": "Successful response",
