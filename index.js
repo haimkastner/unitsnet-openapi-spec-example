@@ -13,8 +13,13 @@ app.use((req, res, next) => {
     next();
 });
 
+// Forward browser from / to /docs
+app.get('/', (req, res) => {
+    res.redirect('/docs');
+});
+
 // Serve Swagger UI
-app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Mock API response for /length endpoint
 app.get('/length', (req, res) => {
